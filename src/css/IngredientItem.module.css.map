@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,KAAK,CAAC;EACF,YAAY,EAAE,KAAK;EACnB,YAAY,EAAE,KAAK;EACnB,YAAY,EAAE,KAAK;EACnB,gBAAgB,EAAE,KAAK;EACvB,aAAa,EAAE,IAAI;EACnB,OAAO,EAAE,IAAI;EACb,QAAQ,EAAE,MAAM;EAChB,WAAW,EAAE,MAAM;EACnB,MAAM,EAAE,EAAE;EACV,OAAO,EAAE,WAAW;CAKvB;;AAfD,AAYI,KAZC,CAYD,CAAC,CAAA;EACG,SAAS,EAAE,GAAG;CACjB",
+    "sources": [
+        "IngredientItem.module.scss"
+    ],
+    "names": [],
+    "file": "IngredientItem.module.css"
+}

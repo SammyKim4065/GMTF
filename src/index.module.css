@@ -1,0 +1,46 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.imageContent img {
+  display: block;
+  position: absolute;
+}
+#root {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+.bbq {
+  width: 40vw;
+  height: 30vw;
+  transform: translate(-40%, -30%);
+}
+
+.hamburger {
+  width: 40vw;
+  height: 40vw;
+  transform: translate(-40%, 50%);
+}
+
+.padthai {
+  width: 40vw;
+  height: 30vw;
+  transform: translate(200%, -20%);
+}
+
+.tomyam {
+  width: 40vw;
+  height: 40vw;
+  transform: translate(200%, 50%);
+}

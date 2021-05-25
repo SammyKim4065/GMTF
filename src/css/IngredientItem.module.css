@@ -1,0 +1,19 @@
+.item {
+  border-style: solid;
+  border-color: black;
+  border-width: 0.5px;
+  background-color: beige;
+  border-radius: 50px;
+  padding: 10px;
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 1%;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.item p {
+  font-size: 1vw;
+}
+/*# sourceMappingURL=IngredientItem.module.css.map */

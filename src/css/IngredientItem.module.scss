@@ -1,0 +1,16 @@
+.item {
+    border-style: solid;
+    border-color: black;
+    border-width: 0.5px;
+    background-color: beige;
+    border-radius: 50px;
+    padding: 10px;
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 1%;
+    display: inline-flex;
+
+    p{
+        font-size: 1vw;
+    }
+}

@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Lobster&display=swap");
+
+#root {
+  padding: 16px;
+}
+p {
+  font-family: "Abril Fatface", cursive;
+}
+
+.mealPlanningText {
+  text-align: center;
+  margin: 0.5%;
+  font-weight: bolder;
+  font-size: 1vw;
+}
+
+.logoText {
+  font-size: 2vw;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 0%;
+}
+
+.logoTextSub {
+  font-size: 1vw;
+  font-weight: lighter;
+  margin-top: 0%;
+  text-align: center;
+}
+
+.cardview {
+  width: 5%;
+  padding: 10px;
+}
+
+.shoppingIcon {
+  float: right;
+  width: 10%;
+  padding: 10px;
+}
+
+.icon {
+  font-size: 1vw;
+}

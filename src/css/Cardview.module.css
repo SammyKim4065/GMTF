@@ -1,0 +1,9 @@
+.card {
+  background-color: lightgray;
+  margin: 10px;
+  display: inline-block;
+  border-radius: 30px;
+  text-align: center;
+  font-size: 1vw;
+}
+/*# sourceMappingURL=Cardview.module.css.map */

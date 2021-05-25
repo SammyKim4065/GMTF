@@ -1,0 +1,24 @@
+.dashboadContainer {
+  position: relative;
+  width: 100%;
+}
+
+.foodContainer {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 20% 60% 20%;
+      grid-template-columns: 20% 60% 20%;
+  gap: 0px 0px;
+  position: absolute;
+  width: 100%;
+  opacity: 1;
+}
+
+.foodItem {
+  margin-top: 10%;
+}
+
+.foodDetail {
+  position: absolute;
+}
+/*# sourceMappingURL=Dashboard.module.css.map */
