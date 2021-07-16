@@ -1,10 +1,37 @@
-@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Lobster&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Unica+One&display=swap");
 
-#root {
-  padding: 16px;
-}
 p {
   font-family: "Abril Fatface", cursive;
+}
+
+@mixin input($Isvisible) {
+  text-align: center;
+  border-radius: 10px;
+  @if $Isvisible {
+    display: block;
+    width: 100%;
+  } @else {
+    display: none;
+    width: 0px;
+  }
+}
+
+.gridContainer {
+  display: grid;
+  grid-template-columns: 10% 10% 50% 10% 10%;
+
+  width: 100%;
+  margin-top: 1rem;
+  justify-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.displayNone {
+  display: none;
+}
+.display {
+  display: block;
 }
 
 .mealPlanningText {
@@ -15,30 +42,170 @@ p {
 }
 
 .logoText {
-  font-size: 2vw;
+  font-size: 4vw;
   font-weight: bold;
   text-align: center;
-  margin-bottom: 0%;
+  margin: 0%;
 }
 
 .logoTextSub {
-  font-size: 1vw;
+  font-size: 2vw;
   font-weight: lighter;
-  margin-top: 0%;
+  margin: 0%;
   text-align: center;
+  transform: translateY(-65%);
+}
+
+@keyframes logoTextAnim {
+  from {
+    text-shadow: 0px 0px 5px #603813;
+  }
+  to {
+    text-shadow: 0px 0px 5px #ecbaaa;
+  }
 }
 
 .cardview {
-  width: 5%;
+  @extend %center;
   padding: 10px;
+  width: 40%;
+  justify-self: center;
+}
+
+.cardview:hover {
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px,
+    rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px,
+    rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
 }
 
 .shoppingIcon {
-  float: right;
-  width: 10%;
-  padding: 10px;
+  width: auto;
+  justify-self: end;
+  padding: 10px 10px;
+  position: relative;
+
+  p {
+    white-space: nowrap;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+.shoppingIcon:hover {
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px,
+    rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px,
+    rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
 }
 
 .icon {
   font-size: 1vw;
+}
+
+%center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.searchInvalid {
+  @extend %center;
+  justify-self: center;
+  padding-left: 1vw;
+  padding-right: 1vw;
+  display: inline-flex;
+  width: 100%;
+  gap: 0.5vw;
+  transition: 1s ease;
+
+  input {
+    @include input(true);
+    transition: 0.5s ease;
+  }
+}
+
+.searchValid {
+  @extend %center;
+  justify-self: auto;
+  display: inline-flex;
+  width: 50%;
+  transition: 1s ease;
+
+  input {
+    @include input(false);
+    transition: 0.5s ease;
+  }
+}
+
+.searchValid:hover {
+  @extend .searchInvalid;
+}
+
+.redCircle {
+  background-color: brown;
+  width: 1%;
+  height: 2%;
+  position: absolute;
+  z-index: 1;
+  border-radius: 50%;
+  transform: translate(-50%, 20%);
+}
+.mealplanContainer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.containerTextLogo {
+  display: grid;
+  justify-items: center;
+  margin-top: 2em;
+
+  img {
+    max-width: 30%;
+    max-height: 100%;
+    height: 100%;
+  }
+}
+
+.headerBg {
+  position: absolute;
+  transform: translateY(-15%);
+  animation: upDowmMainAnim 4s ease-in-out infinite alternate-reverse;
+}
+
+.headerBg g:nth-child(2) {
+  animation: upDowmAnim 5s ease-in-out infinite alternate-reverse;
+}
+
+.headerBg g:nth-child(4) {
+  animation: upDowmAnim 5s ease-in-out infinite alternate-reverse;
+}
+
+.headerBg g:nth-child(7) {
+  animation: upDowmAnim 5s ease-in-out infinite alternate-reverse;
+}
+
+.headerBg g:nth-child(8) {
+  animation: upDowmAnim 5s ease-in-out infinite alternate-reverse;
+}
+
+.headerBg g:nth-child(9) {
+  animation: upDowmAnim 5s ease-in-out infinite alternate-reverse;
+}
+
+@keyframes upDowmAnim {
+  from {
+    transform: translateY(0%);
+  }
+  to {
+    transform: translateY(-20%);
+  }
+}
+
+@keyframes upDowmMainAnim {
+  from {
+    transform: translateY(-15%);
+  }
+  to {
+    transform: translateY(-20%);
+  }
 }

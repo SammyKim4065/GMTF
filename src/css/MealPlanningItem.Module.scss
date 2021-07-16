@@ -1,0 +1,68 @@
+.container {
+  display: grid;
+  grid-template-rows: 20% 60% 20%;
+  width: 100%;
+  height: 100%;
+  padding-top: 5%;
+}
+.mealsBox {
+  width: 100%;
+  margin-bottom: 2vw;
+}
+
+.headerItemMealPlan {
+  display: grid;
+  height: 100%;
+  justify-items: center;
+  align-items: center;
+  background-color: papayawhip;
+  border-top-left-radius: 5vw;
+  border-top-right-radius: 5vw;
+  justify-content: center;
+
+  p {
+    font-size: 5vw;
+    margin: 0;
+  }
+  .monthString {
+    font-size: 3vw;
+  }
+}
+
+.mealContainer {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  background-color: powderblue;
+
+  .mealItem {
+    display: flex;
+    background-color: powderblue;
+  }
+}
+
+.durationText {
+  font-size: 2vw;
+  display: grid;
+  background-color: papayawhip;
+  animation-duration: 5s;
+  animation-name: durationTextAnim;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.breakfastText {
+  @extend .durationText;
+}
+
+// @keyframes durationTextAnim {
+//   20% {
+//     height: 35%;
+//   }
+//   100% {
+//     height: 80%;
+//   }
+// }

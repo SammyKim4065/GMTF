@@ -1,26 +1,32 @@
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState } from "react";
+import { useHistory } from "react-router-dom";
 import { apiUrl, apiKey, includeNutrition } from "../utilize/api";
-import FoodItem from "./FoodItem";
+import Foods from "./Foods";
 import styleClass from "../css/Dashboard.module.css";
-import DetailFood from "./DetailFood";
-import Header from "./Header";
+import Lottie from "react-lottie";
+import loadingAnim from "../lotties/7751-load.json";
+import headerStyleClass from "../css/Header.module.css";
 
-const Dashboard = () => {
+const Dashboard = (props) => {
   const [foods, setFoods] = useState([]);
-  const [foodDetail, setfoodDetail] = useState({});
-  const [isOpenFoodDetail, setIsOpenFoodDetail] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+
   const allFoods = [];
   const type = "breakfast,beverage,appetizer";
-  const number = 50;
- 
+  const number = 30;
+  const history = useHistory();
 
-  async function fetchFoodData() {
+  const fetchFoodData = async () => {
+    setIsLoading(true);
+
     const response = await fetch(
       apiUrl +
         "/recipes/complexSearch?type=" +
         type +
         "&number=" +
         number +
+        "&query=" +
+        props.valueSearch +
         "&apiKey=" +
         apiKey +
         "&" +
@@ -29,66 +35,51 @@ const Dashboard = () => {
     );
     const data = await response.json();
 
-    data.results.map((item) => {
-      allFoods.push(item);
-    });
+    data.results.map((item) => allFoods.push(item));
 
     setFoods(allFoods);
-  }
-
-  async function fetchFoodDetailData(foodId) {
-    const responce = await fetch(
-      apiUrl +
-        "/recipes/" +
-        foodId +
-        "/information?apiKey=" +
-        apiKey +
-        "&includeNutrition=true"
-    );
-    const data = await responce.json();
-    setfoodDetail(data);
-    setIsOpenFoodDetail(true);
-  }
-
-  const foodDetailHandle = (foodId) => {
-    fetchFoodDetailData(foodId);
+    setIsLoading(false);
   };
 
-  const closeFoodDetailHandler = () => {
-    setIsOpenFoodDetail((oldValue) => !oldValue);
-    setfoodDetail({});
+  const foodDetailHandler = (foodId) => {
+    history.push("/detail/" + foodId);
+    props.clearSearch();
   };
 
-  const foodDetailValidate = isOpenFoodDetail ? (
-    <DetailFood
-      foodData={foodDetail}
-      classStyle={styleClass.foodDetail}
-      closeHandler={closeFoodDetailHandler}
-    />
-  ) : (
-    <></>
-  );
+  const loadingOption = {
+    loop: true,
+    autoplay: true,
+    animationData: loadingAnim,
+    rendererSettings: {
+      preserveAspectRatio: "xMidYMid slice",
+    },
+  };
 
   useEffect(() => {
     fetchFoodData();
-  }, []);
+  }, [props.valueSearch]);
 
   return (
     <>
-      <Header />
-
       <div className={styleClass.dashboadContainer}>
+        <div className={headerStyleClass.containerTextLogo}>
+          <img src="/img/croissant.png" alt="croissant"></img>
+          <p className={headerStyleClass.logoText}>GIVE ME THE FOODS</p>
+        </div>
         <div className={styleClass.foodContainer}>
           <div></div>
-          <FoodItem
-            items={foods}
-            styleClass={styleClass.foodItem}
-            detailFoodHandle={foodDetailHandle}
-          />
+
+          <Foods items={foods} detailFoodHandle={foodDetailHandler} />
           <div></div>
         </div>
 
-        {foodDetailValidate}
+        <div
+          className={`${
+            isLoading ? styleClass.display : styleClass.displayNone
+          }`}
+        >
+          <Lottie options={loadingOption} height={400} width={400} />
+        </div>
       </div>
     </>
   );

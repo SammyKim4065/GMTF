@@ -1,0 +1,61 @@
+.root {
+  width: 100%;
+  display: grid;
+  justify-items: center;
+  position: relative;
+}
+
+.container {
+  width: 50%;
+  height: 100%;
+  text-align: center;
+  border-radius: 5em 5em 0 0;
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+
+.cardBack {
+  color: rgb(32, 22, 22);
+}
+//****************************************//
+.title {
+  font-size: 3vw;
+  text-align: center;
+  margin-bottom: auto;
+  padding-top: 2%;
+}
+.subTitle {
+  text-align: center;
+  font-size: 1vw;
+  margin-top: auto;
+  margin-bottom: 5%;
+}
+.fontDuration {
+  text-align: center;
+  font-size: 1vw;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+}
+
+.date {
+  display: flex;
+}
+
+.display {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+}
+
+.displayNone {
+  display: none;
+}

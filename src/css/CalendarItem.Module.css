@@ -1,0 +1,22 @@
+.dateBox, .activeDate {
+  border-radius: 10px;
+  border-style: solid;
+  border-color: #f8ab87;
+  background-color: transparent;
+}
+
+.dateBox p, .activeDate p {
+  font-size: 2vw;
+  margin: 0;
+}
+
+.activeDate {
+  border-color: transparent;
+  -webkit-box-shadow: blue 0px 0px 0px 0.2vw, #1fc11b 0px 0px 0px 0.4vw, #ffd913 0px 0px 0px 0.6vw, #ff9c55 0px 0px 0px 0.8vw, #ff5555 0px 0px 0px 1vw;
+          box-shadow: blue 0px 0px 0px 0.2vw, #1fc11b 0px 0px 0px 0.4vw, #ffd913 0px 0px 0px 0.6vw, #ff9c55 0px 0px 0px 0.8vw, #ff5555 0px 0px 0px 1vw;
+}
+
+.displayNone {
+  opacity: 0;
+}
+/*# sourceMappingURL=CalendarItem.Module.css.map */

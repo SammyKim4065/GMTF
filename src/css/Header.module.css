@@ -1,10 +1,28 @@
-@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Lobster&display=swap");
-#root {
-  padding: 16px;
-}
-
+@import url("https://fonts.googleapis.com/css2?family=Unica+One&display=swap");
 p {
   font-family: "Abril Fatface", cursive;
+}
+
+.gridContainer {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 10% 10% 50% 10% 10%;
+      grid-template-columns: 10% 10% 50% 10% 10%;
+  width: 100%;
+  margin-top: 1rem;
+  justify-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+}
+
+.displayNone {
+  display: none;
+}
+
+.display {
+  display: block;
 }
 
 .mealPlanningText {
@@ -15,31 +33,228 @@ p {
 }
 
 .logoText {
-  font-size: 2vw;
+  font-size: 4vw;
   font-weight: bold;
   text-align: center;
-  margin-bottom: 0%;
+  margin: 0%;
 }
 
 .logoTextSub {
-  font-size: 1vw;
+  font-size: 2vw;
   font-weight: lighter;
-  margin-top: 0%;
+  margin: 0%;
   text-align: center;
+  -webkit-transform: translateY(-65%);
+          transform: translateY(-65%);
+}
+
+@-webkit-keyframes logoTextAnim {
+  from {
+    text-shadow: 0px 0px 5px #603813;
+  }
+  to {
+    text-shadow: 0px 0px 5px #ecbaaa;
+  }
+}
+
+@keyframes logoTextAnim {
+  from {
+    text-shadow: 0px 0px 5px #603813;
+  }
+  to {
+    text-shadow: 0px 0px 5px #ecbaaa;
+  }
 }
 
 .cardview {
-  width: 5%;
   padding: 10px;
+  width: 40%;
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+.cardview:hover {
+  -webkit-box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+          box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
 }
 
 .shoppingIcon {
-  float: right;
-  width: 10%;
-  padding: 10px;
+  width: auto;
+  -ms-grid-column-align: end;
+      justify-self: end;
+  padding: 10px 10px;
+  position: relative;
+}
+
+.shoppingIcon p {
+  white-space: nowrap;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.shoppingIcon:hover {
+  -webkit-box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+          box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
 }
 
 .icon {
   font-size: 1vw;
+}
+
+.cardview, .searchInvalid, .searchValid:hover, .searchValid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.searchInvalid, .searchValid:hover {
+  justify-self: center;
+  padding-left: 1vw;
+  padding-right: 1vw;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: 100%;
+  gap: 0.5vw;
+  -webkit-transition: 1s ease;
+  transition: 1s ease;
+}
+
+.searchInvalid input, .searchValid:hover input {
+  text-align: center;
+  border-radius: 10px;
+  display: block;
+  width: 100%;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+
+.searchValid {
+  justify-self: auto;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: 50%;
+  -webkit-transition: 1s ease;
+  transition: 1s ease;
+}
+
+.searchValid input {
+  text-align: center;
+  border-radius: 10px;
+  display: none;
+  width: 0px;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+
+.redCircle {
+  background-color: brown;
+  width: 1%;
+  height: 2%;
+  position: absolute;
+  z-index: 1;
+  border-radius: 50%;
+  -webkit-transform: translate(-50%, 20%);
+          transform: translate(-50%, 20%);
+}
+
+.mealplanContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.containerTextLogo {
+  display: -ms-grid;
+  display: grid;
+  justify-items: center;
+  margin-top: 2em;
+}
+
+.containerTextLogo img {
+  max-width: 30%;
+  max-height: 100%;
+  height: 100%;
+}
+
+.headerBg {
+  position: absolute;
+  -webkit-transform: translateY(-15%);
+          transform: translateY(-15%);
+  animation: upDowmMainAnim 4s ease-in-out infinite alternate-reverse;
+}
+
+.headerBg g:nth-child(2) {
+  animation: upDowmAnim 5s ease-in-out infinite alternate-reverse;
+}
+
+.headerBg g:nth-child(4) {
+  animation: upDowmAnim 5s ease-in-out infinite alternate-reverse;
+}
+
+.headerBg g:nth-child(7) {
+  animation: upDowmAnim 5s ease-in-out infinite alternate-reverse;
+}
+
+.headerBg g:nth-child(8) {
+  animation: upDowmAnim 5s ease-in-out infinite alternate-reverse;
+}
+
+.headerBg g:nth-child(9) {
+  animation: upDowmAnim 5s ease-in-out infinite alternate-reverse;
+}
+
+@-webkit-keyframes upDowmAnim {
+  from {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+  to {
+    -webkit-transform: translateY(-20%);
+            transform: translateY(-20%);
+  }
+}
+
+@keyframes upDowmAnim {
+  from {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+  to {
+    -webkit-transform: translateY(-20%);
+            transform: translateY(-20%);
+  }
+}
+
+@-webkit-keyframes upDowmMainAnim {
+  from {
+    -webkit-transform: translateY(-15%);
+            transform: translateY(-15%);
+  }
+  to {
+    -webkit-transform: translateY(-20%);
+            transform: translateY(-20%);
+  }
+}
+
+@keyframes upDowmMainAnim {
+  from {
+    -webkit-transform: translateY(-15%);
+            transform: translateY(-15%);
+  }
+  to {
+    -webkit-transform: translateY(-20%);
+            transform: translateY(-20%);
+  }
 }
 /*# sourceMappingURL=Header.module.css.map */

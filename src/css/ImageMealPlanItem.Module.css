@@ -1,0 +1,52 @@
+.root {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.imageContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  justify-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.imageContainer:hover {
+  -webkit-transform: scale(2);
+          transform: scale(2);
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+
+.deleteIcon {
+  width: 1vw;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.foodImage {
+  height: 4vw;
+  width: 4vw;
+  -webkit-box-shadow: rgba(73, 72, 72, 0.56) -5px 5px 3px 4px;
+          box-shadow: rgba(73, 72, 72, 0.56) -5px 5px 3px 4px;
+}
+
+.box {
+  height: 10vw;
+  width: 10vw;
+}
+/*# sourceMappingURL=ImageMealPlanItem.Module.css.map */

@@ -1,14 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom";
-// import indexStyle from "./index.module.css";
-// import Header from "./component/Header";
-import Dashboard from "./component/Dashboard";
+import { BrowserRouter as Router } from "react-router-dom"
+import App from "./App";
+
 
 ReactDOM.render(
-  <React.StrictMode>
-    {/* <Welcome/>
-    <Header className={indexStyle.header} /> */}
-    <Dashboard/>
-  </React.StrictMode>,
+    <Router>
+      <App/>
+    </Router>,
   document.getElementById("root")
 );

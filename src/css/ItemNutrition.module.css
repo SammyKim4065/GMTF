@@ -1,0 +1,37 @@
+.content {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: auto auto;
+      grid-template-rows: auto auto;
+  margin: 5px;
+}
+
+.box {
+  margin-top: 5px;
+  display: block;
+  background-color: #e27549;
+  text-align: center;
+  padding: 5% 20% 5% 20%;
+  border-radius: 50px;
+}
+
+.box p {
+  font-size: 1vw;
+  color: whitesmoke;
+  margin: 0px;
+  white-space: nowrap;
+}
+
+.icon {
+  margin: auto;
+  font-size: 1.4vw;
+  text-align: center;
+}
+
+.title {
+  display: block;
+  margin: 0px;
+  font-size: 1.2vw;
+  text-align: center;
+}
+/*# sourceMappingURL=ItemNutrition.module.css.map */

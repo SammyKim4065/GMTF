@@ -1,0 +1,75 @@
+.container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 20% 60% 20%;
+      grid-template-rows: 20% 60% 20%;
+  width: 100%;
+  height: 100%;
+  padding-top: 5%;
+}
+
+.mealsBox {
+  width: 100%;
+  margin-bottom: 2vw;
+}
+
+.headerItemMealPlan {
+  display: -ms-grid;
+  display: grid;
+  height: 100%;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: papayawhip;
+  border-top-left-radius: 5vw;
+  border-top-right-radius: 5vw;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.headerItemMealPlan p {
+  font-size: 5vw;
+  margin: 0;
+}
+
+.headerItemMealPlan .monthString {
+  font-size: 3vw;
+}
+
+.mealContainer {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto auto;
+      grid-template-columns: auto auto auto;
+  background-color: powderblue;
+}
+
+.mealContainer .mealItem {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: powderblue;
+}
+
+.durationText, .breakfastText {
+  font-size: 2vw;
+  display: -ms-grid;
+  display: grid;
+  background-color: papayawhip;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-name: durationTextAnim;
+          animation-name: durationTextAnim;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
+  text-orientation: upright;
+  margin-left: 0;
+  margin-right: 0;
+}
+/*# sourceMappingURL=MealPlanningItem.Module.css.map */

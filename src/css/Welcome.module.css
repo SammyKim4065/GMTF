@@ -1,0 +1,605 @@
+@import url("https://fonts.googleapis.com/css2?family=Unica+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
+body {
+  margin: 0;
+}
+
+.container {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.bg {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  opacity: 0.5;
+  margin: 0;
+  z-index: -3;
+}
+
+.bg img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-animation: bgAnim 5s infinite alternate;
+          animation: bgAnim 5s infinite alternate;
+}
+
+@-webkit-keyframes bgAnim {
+  from {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+}
+
+@keyframes bgAnim {
+  from {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+}
+
+.iconContainer {
+  position: absolute;
+}
+
+.textLogoContainer {
+  text-align: center;
+  margin: 0;
+  position: fixed;
+  height: 100%;
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 10px;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  left: 50%;
+  width: -moz-fit-content;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.textLogoContainer p {
+  margin: 1px;
+}
+
+.textLogoContainer .topBurger {
+  -webkit-animation: topBurgerAnim 1s;
+          animation: topBurgerAnim 1s;
+  width: 100%;
+}
+
+@-webkit-keyframes topBurgerAnim {
+  from {
+    -webkit-transform: translateY(-320%);
+            transform: translateY(-320%);
+  }
+  to {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+}
+
+@keyframes topBurgerAnim {
+  from {
+    -webkit-transform: translateY(-320%);
+            transform: translateY(-320%);
+  }
+  to {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+}
+
+.textLogoContainer .bottomBurger {
+  -webkit-animation: bottomBurgerAnim 1s;
+          animation: bottomBurgerAnim 1s;
+  width: 100%;
+}
+
+@-webkit-keyframes bottomBurgerAnim {
+  from {
+    -webkit-transform: translateY(400%);
+            transform: translateY(400%);
+  }
+  to {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+}
+
+@keyframes bottomBurgerAnim {
+  from {
+    -webkit-transform: translateY(400%);
+            transform: translateY(400%);
+  }
+  to {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+}
+
+.textLogoContainer .mainText {
+  font-size: 5vw;
+  margin: 0;
+}
+
+.textLogoContainer .mainText span:nth-child(1) {
+  -webkit-animation: mainText-aim 1s 0s;
+          animation: mainText-aim 1s 0s;
+}
+
+.textLogoContainer .mainText span:nth-child(2) {
+  -webkit-animation: mainText-aim 1s 0.2s;
+          animation: mainText-aim 1s 0.2s;
+}
+
+.textLogoContainer .mainText span:nth-child(3) {
+  -webkit-animation: mainText-aim 1s 0.4s;
+          animation: mainText-aim 1s 0.4s;
+}
+
+.textLogoContainer .mainText span:nth-child(4) {
+  -webkit-animation: mainText-aim 1s 0.6s;
+          animation: mainText-aim 1s 0.6s;
+}
+
+.textLogoContainer .mainText span:nth-child(5) {
+  -webkit-animation: mainText-aim 1s 0.7s;
+          animation: mainText-aim 1s 0.7s;
+}
+
+.textLogoContainer .mainText span:nth-child(6) {
+  -webkit-animation: mainText-aim 1s 0.8s;
+          animation: mainText-aim 1s 0.8s;
+}
+
+.textLogoContainer .mainText span:nth-child(7) {
+  -webkit-animation: mainText-aim 1s 0.9s;
+          animation: mainText-aim 1s 0.9s;
+}
+
+.textLogoContainer .mainText span:nth-child(8) {
+  -webkit-animation: mainText-aim 1s 1s;
+          animation: mainText-aim 1s 1s;
+}
+
+@-webkit-keyframes mainText-aim {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes mainText-aim {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.loginContainer {
+  display: -ms-grid;
+  display: grid;
+  justify-items: center;
+}
+
+.loginContainer button {
+  border-radius: 50px;
+  font-size: 15px;
+  font-family: "Abril Fatface", cursive;
+}
+
+.burgerBox {
+  display: -ms-grid;
+  display: grid;
+}
+
+.burgerBox div:nth-child(2) {
+  -webkit-animation: leftBurgerBoxAnim 2s;
+          animation: leftBurgerBoxAnim 2s;
+}
+
+.burgerBox div:nth-child(3) {
+  -webkit-animation: rightBurgerBoxAnim 2s;
+          animation: rightBurgerBoxAnim 2s;
+}
+
+.burgerBox div:nth-child(4) {
+  -webkit-animation: leftBurgerBoxAnim 2s;
+          animation: leftBurgerBoxAnim 2s;
+}
+
+.burgerBox div:nth-child(5) {
+  -webkit-animation: rightBurgerBoxAnim 2s;
+          animation: rightBurgerBoxAnim 2s;
+}
+
+@-webkit-keyframes leftBurgerBoxAnim {
+  from {
+    -webkit-transform: translateX(400%);
+            transform: translateX(400%);
+  }
+  to {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+}
+
+@keyframes leftBurgerBoxAnim {
+  from {
+    -webkit-transform: translateX(400%);
+            transform: translateX(400%);
+  }
+  to {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+}
+
+@-webkit-keyframes rightBurgerBoxAnim {
+  from {
+    -webkit-transform: translateX(-310%);
+            transform: translateX(-310%);
+  }
+  to {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+}
+
+@keyframes rightBurgerBoxAnim {
+  from {
+    -webkit-transform: translateX(-310%);
+            transform: translateX(-310%);
+  }
+  to {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+}
+
+.box input, .usernameContainer input, .lastnameContainer input, .emailContainer input, .passContainer input, .inValidContainer input {
+  overflow: hidden;
+  padding: 0.5em;
+  font-size: 1vw;
+  border-radius: 5em;
+  border-style: solid;
+  border-width: 0.3em;
+  font-family: "Abril Fatface", cursive;
+  margin: 0;
+  padding: 0.5vw;
+  padding-left: 1.2em;
+  width: 90%;
+  color: white;
+  cursor: pointer;
+}
+
+.box:hover, .usernameContainer:hover, .lastnameContainer:hover, .emailContainer:hover, .passContainer:hover, .inValidContainer:hover {
+  -webkit-transform: translate(10px, 0);
+          transform: translate(10px, 0);
+}
+
+.inValid {
+  -webkit-animation: shake 0.5s;
+          animation: shake 0.5s;
+  font-size: 10em;
+  width: 50%;
+  height: 50%;
+}
+
+@-webkit-keyframes shake {
+  0% {
+    -webkit-transform: translate(1px, 1px) rotate(0deg);
+            transform: translate(1px, 1px) rotate(0deg);
+  }
+  10% {
+    -webkit-transform: translate(-1px, -2px) rotate(-1deg);
+            transform: translate(-1px, -2px) rotate(-1deg);
+  }
+  20% {
+    -webkit-transform: translate(-3px, 0px) rotate(1deg);
+            transform: translate(-3px, 0px) rotate(1deg);
+  }
+  30% {
+    -webkit-transform: translate(3px, 2px) rotate(0deg);
+            transform: translate(3px, 2px) rotate(0deg);
+  }
+  40% {
+    -webkit-transform: translate(1px, -1px) rotate(1deg);
+            transform: translate(1px, -1px) rotate(1deg);
+  }
+  50% {
+    -webkit-transform: translate(-1px, 2px) rotate(-1deg);
+            transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  60% {
+    -webkit-transform: translate(-3px, 1px) rotate(0deg);
+            transform: translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+    -webkit-transform: translate(3px, 1px) rotate(-1deg);
+            transform: translate(3px, 1px) rotate(-1deg);
+  }
+  80% {
+    -webkit-transform: translate(-1px, -1px) rotate(1deg);
+            transform: translate(-1px, -1px) rotate(1deg);
+  }
+  90% {
+    -webkit-transform: translate(1px, 2px) rotate(0deg);
+            transform: translate(1px, 2px) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: translate(1px, -2px) rotate(-1deg);
+            transform: translate(1px, -2px) rotate(-1deg);
+  }
+}
+
+@keyframes shake {
+  0% {
+    -webkit-transform: translate(1px, 1px) rotate(0deg);
+            transform: translate(1px, 1px) rotate(0deg);
+  }
+  10% {
+    -webkit-transform: translate(-1px, -2px) rotate(-1deg);
+            transform: translate(-1px, -2px) rotate(-1deg);
+  }
+  20% {
+    -webkit-transform: translate(-3px, 0px) rotate(1deg);
+            transform: translate(-3px, 0px) rotate(1deg);
+  }
+  30% {
+    -webkit-transform: translate(3px, 2px) rotate(0deg);
+            transform: translate(3px, 2px) rotate(0deg);
+  }
+  40% {
+    -webkit-transform: translate(1px, -1px) rotate(1deg);
+            transform: translate(1px, -1px) rotate(1deg);
+  }
+  50% {
+    -webkit-transform: translate(-1px, 2px) rotate(-1deg);
+            transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  60% {
+    -webkit-transform: translate(-3px, 1px) rotate(0deg);
+            transform: translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+    -webkit-transform: translate(3px, 1px) rotate(-1deg);
+            transform: translate(3px, 1px) rotate(-1deg);
+  }
+  80% {
+    -webkit-transform: translate(-1px, -1px) rotate(1deg);
+            transform: translate(-1px, -1px) rotate(1deg);
+  }
+  90% {
+    -webkit-transform: translate(1px, 2px) rotate(0deg);
+            transform: translate(1px, 2px) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: translate(1px, -2px) rotate(-1deg);
+            transform: translate(1px, -2px) rotate(-1deg);
+  }
+}
+
+.usernameContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.lastnameContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.emailContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.passContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.inValidContainer {
+  background-color: brown;
+  display: block;
+}
+
+.actionBtn {
+  display: -ms-grid;
+  display: grid;
+  position: relative;
+  width: 30%;
+  cursor: pointer;
+  justify-items: center;
+}
+
+.actionBtn p {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  font-size: 1.5vw;
+}
+
+.actionBtn img {
+  width: 50%;
+  height: 100%;
+}
+
+.loginText, .loginText:hover {
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  -webkit-text-stroke: 1px #000000;
+  font-variation-settings: "wght" 900, "ital" 1;
+  font-size: 3vw;
+  text-align: center;
+  color: transparent;
+  cursor: pointer;
+  border: transparent;
+  background-color: transparent;
+}
+
+.loginText:hover {
+  color: #492828;
+  -webkit-text-stroke: transparent;
+  text-shadow: 5px 0px 0px #07bccc;
+}
+
+.show {
+  position: fixed;
+  width: 100%;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-animation: showAnim 1s;
+          animation: showAnim 1s;
+  opacity: 1;
+  z-index: 3;
+  background-color: whitesmoke;
+}
+
+.hide {
+  display: none;
+}
+
+@-webkit-keyframes showAnim {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes showAnim {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.welcome {
+  font-size: 10em;
+  color: transparent;
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  justify-items: center;
+}
+
+.welcome svg {
+  width: 50%;
+}
+
+.welcome path:nth-child(8) {
+  stroke-dasharray: 1420;
+  stroke-dashoffset: 1420;
+  -webkit-animation: welcomeAnim 2s ease forwards;
+          animation: welcomeAnim 2s ease forwards;
+}
+
+.welcome path:nth-child(9) {
+  stroke-dasharray: 460;
+  stroke-dashoffset: 460;
+  -webkit-animation: welcomeAnim 2s ease forwards;
+          animation: welcomeAnim 2s ease forwards;
+}
+
+.welcome path:nth-child(10) {
+  stroke-dasharray: 550;
+  stroke-dashoffset: 550;
+  -webkit-animation: welcomeAnim 2s ease forwards;
+          animation: welcomeAnim 2s ease forwards;
+}
+
+.welcome path:nth-child(11) {
+  stroke-dasharray: 500;
+  stroke-dashoffset: 500;
+  -webkit-animation: welcomeAnim 2s ease forwards;
+          animation: welcomeAnim 2s ease forwards;
+}
+
+.welcome path:nth-child(12) {
+  stroke-dasharray: 500;
+  stroke-dashoffset: 500;
+  -webkit-animation: welcomeAnim 2s ease forwards;
+          animation: welcomeAnim 2s ease forwards;
+}
+
+.welcome path:nth-child(13) {
+  stroke-dasharray: 810;
+  stroke-dashoffset: 810;
+  -webkit-animation: welcomeAnim 2s ease forwards;
+          animation: welcomeAnim 2s ease forwards;
+}
+
+.welcome path:nth-child(14) {
+  stroke-dasharray: 460;
+  stroke-dashoffset: 460;
+  -webkit-animation: welcomeAnim 2s ease forwards;
+          animation: welcomeAnim 2s ease forwards;
+}
+
+@-webkit-keyframes welcomeAnim {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes welcomeAnim {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@-webkit-keyframes welcomeMainAnim {
+  to {
+    -webkit-transform: translate(50%);
+            transform: translate(50%);
+  }
+}
+
+@keyframes welcomeMainAnim {
+  to {
+    -webkit-transform: translate(50%);
+            transform: translate(50%);
+  }
+}
+/*# sourceMappingURL=Welcome.module.css.map */

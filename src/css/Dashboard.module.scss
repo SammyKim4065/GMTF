@@ -1,21 +1,29 @@
+.setActiveScroll {
+  background-color: burlywood;
+}
+
 .dashboadContainer {
   position: relative;
   width: 100%;
+  margin-top: 15%;
 }
 
 .foodContainer {
   display: grid;
   grid-template-columns: 20% 60% 20%;
   gap: 0px 0px;
-  position: absolute;
   width: 100%;
   opacity: 1;
 }
 
-.foodItem {
-  margin-top: 10%;
+.display {
+  width: 100%;
+  margin-top: 5%;
+  display: grid;
+  justify-content: center;
+  align-content: center;
 }
 
-.foodDetail {
-  position: absolute;
+.displayNone {
+  display: none;
 }

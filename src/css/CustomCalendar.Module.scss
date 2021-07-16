@@ -1,0 +1,42 @@
+.calendarRoot {
+  padding: 1vw;
+  margin: 0.2vw;
+  padding: 1em;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto auto;
+  gap: 1.5vw;
+}
+
+.weekItem {
+  text-align: center;
+}
+
+.titleText {
+  width: 100%;
+  display: grid;
+  text-align: center;
+  font-size: 4vw;
+  margin-bottom: 0em;
+  margin-top: 0em;
+}
+
+.monthBox {
+  display: flex;
+  align-items: center;
+  height: fit-content;
+
+  .icon {
+    font-size: 3vw;
+  }
+  .monthText {
+    @extend .titleText;
+  }
+}
+
+.yearText {
+  @extend .titleText;
+  margin: 0;
+}

@@ -1,0 +1,32 @@
+.root {
+  display: flex;
+  width: fit-content;
+  height: fit-content;
+}
+
+.imageContainer {
+  display: flex;
+  width: 100%;
+  justify-items: center;
+  justify-content: center;
+}
+
+.imageContainer:hover {
+  transform: scale(2);
+  transition: 0.5s ease-in-out;
+}
+.deleteIcon {
+  width: 1vw;
+  justify-content: center;
+  display: flex;
+}
+.foodImage {
+  height: 4vw;
+  width: 4vw;
+  box-shadow: rgba(73, 72, 72, 0.56) -5px 5px 3px 4px;
+}
+
+.box {
+  height: 10vw;
+  width: 10vw;
+}

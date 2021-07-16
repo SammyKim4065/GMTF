@@ -1,19 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Unica+One&display=swap");
 .item {
   border-style: solid;
-  border-color: black;
-  border-width: 0.5px;
-  background-color: beige;
+  border-color: white;
+  border-width: 3px;
+  background-color: #f8d594;
   border-radius: 50px;
-  padding: 10px;
+  padding: 2%;
   overflow: hidden;
   white-space: nowrap;
-  margin: 1%;
+  margin: 0.5%;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
 }
 
 .item p {
-  font-size: 1vw;
+  font-size: 0.7vw;
+  font-weight: bold;
+  font-family: 'Unica One', cursive;
+  margin: 0px;
 }
 /*# sourceMappingURL=IngredientItem.module.css.map */
