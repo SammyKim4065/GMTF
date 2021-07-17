@@ -188,7 +188,7 @@ p {
 }
 
 .headerBg {
-  position: absolute;
+  position: fixed;
   -webkit-transform: translateY(-15%);
           transform: translateY(-15%);
   animation: upDowmMainAnim 4s ease-in-out infinite alternate-reverse;
