@@ -63,7 +63,6 @@
   width: 80%;
   margin-top: 1vw;
   text-justify: distribute;
-  background-color: whitesmoke;
   display: -ms-grid;
   display: grid;
   justify-items: center;
@@ -90,7 +89,7 @@
   font-family: "Viaoda Libre", cursive;
   list-style-type: circle;
   width: 50%;
-  font-size: 1em;
+  font-size: 1vw;
   font-weight: 900;
 }
 
@@ -99,6 +98,7 @@
   font-family: "Viaoda Libre", cursive;
   width: 50%;
   font-weight: 900;
+  font-size: 1vw;
 }
 
 .imageFood {
