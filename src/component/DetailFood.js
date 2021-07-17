@@ -166,22 +166,20 @@ function DetailFood() {
               </div>
             </div>
           </div>
-
-          <div
-            className={`${
-              isLoading ? styleClass.display : styleClass.displayNone
-            }`}
-          >
-            <Lottie options={loadingOption} height={400} width={400} />
-          </div>
-          <MealPlanModal
-            show={isShowModal}
-            handleClose={handleClose}
-            foodDetail={foodDetail}
-            foodId={foodId}
-          />
         </div>
       </div>
+
+      <div
+        className={`${isLoading ? styleClass.display : styleClass.displayNone}`}
+      >
+        <Lottie options={loadingOption} height={400} width={400} />
+      </div>
+      <MealPlanModal
+        show={isShowModal}
+        handleClose={handleClose}
+        foodDetail={foodDetail}
+        foodId={foodId}
+      />
     </>
   );
 }
