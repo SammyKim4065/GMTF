@@ -64,7 +64,7 @@ const Dashboard = (props) => {
       <div className={styleClass.dashboadContainer}>
         <div className={headerStyleClass.containerTextLogo}>
           <img src="/img/croissant.png" alt="croissant"></img>
-          <p className={headerStyleClass.logoText}>GIVE ME THE FOODS</p>
+          <p className={headerStyleClass.logoText}>GIVE ME THAT RECIPE</p>
         </div>
         <div className={styleClass.foodContainer}>
           <div></div>

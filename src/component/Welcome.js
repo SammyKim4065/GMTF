@@ -360,13 +360,16 @@ const Welcome = () => {
           >
             <span>T</span>
             <span>H</span>
-            <span>E</span>
+            <span>A</span>
+            <span>T</span>
 
             <span> </span>
-            <span>F</span>
-            <span>O</span>
-            <span>O</span>
-            <span>D</span>
+            <span>R</span>
+            <span>E</span>
+            <span>C</span>
+            <span>I</span>
+            <span>P</span>
+            <span>E</span>
           </p>
         </div>
 
